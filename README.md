@@ -4,19 +4,14 @@ This module is an Angular JS implementation of Workflows for the Raincatcher pro
 
 ## Setup
 
-This module is packaged in a CommonJS format, exporting the name of the Angular namespace.  The module can be included in an angular.js as follows:
+This module is packaged in a CommonJS format, exporting the name of the Angular namespace.
+The module can be included in an angular.js as follows:
 
 ```javascript
 
 var config = {
   mode: 'admin',
   listColumnViewId: 'listColumnView',
-  mainColumnViewId: 'detailColumnView'
-};
-
-var config = {
-  mode: 'user',
-  toolbarViewId: 'toolbarView',
   mainColumnViewId: 'detailColumnView'
 };
 
@@ -31,17 +26,25 @@ angular.module('app', [
 
 The following configuration options are available for this module:
 
+#### mode (Required)
+
+Allows to switch between user based views and admin views. Possible values 'admin' or 'user'
+
 #### mainColumnViewId (Required)
 
 This is the identifier for the Angular view where the main Workflow views will be rendered.
 
 #### listColumnViewId (Optional)
 
-This is the identifier for the Angular view where the list of Workflows will be rendered into. This is useful for organising where the lists will be rendered on-screen. If not specified, the lists will be rendered into the `mainColumnViewId`. This is only used for the `admin` mode of the module.
+This is the identifier for the Angular view where the list of Workflows will be rendered into.
+This is useful for organising where the lists will be rendered on-screen.
+If not specified, the lists will be rendered into the `mainColumnViewId`.
+This is only used for the `admin` mode of the module.
 
 #### toolbarViewId (User Required)
 
-This is the identifier of the Angular view where the progress of a workflow is displayed to the user. This is only required for scenarios where a workflow is being progressed (e.g. in a mobile application)
+This is the identifier of the Angular view where the progress of a workflow is displayed to the user.
+This is only required for scenarios where a workflow is being progressed (e.g. in a mobile application)
 
 ### Workflow Directives
 
@@ -57,22 +60,27 @@ This is the identifier of the Angular view where the progress of a workflow is d
 
 ### Workflow Step Process
 
-The following directives are used to guide a user through the steps necessary to complete a workflow. The workflow module itself does not contain the logic required for each step, but uses the template directives to render each of the steps to the user.
+The following directives are used to guide a user through the steps necessary to complete a workflow.
+The workflow module itself does not contain the logic required for each step, but uses the template directives to render each of the steps to the user.
 
 The `workflow-process-parent` route is an Angular JS abstract route that is used for all steps in a workflow.
 
 The `workflow-process-begin` route and controller are used to display the summary of the workflow and any results that there may be.
 
-The `workflow-process-steps` route publishes topics to get the current state of the workflow for a workorder. Based on the state, the `workflow-step` directive renders the template defined in the workflow step. At this point, control is passed to the module that implements the individual step.
+The `workflow-process-steps` route publishes topics to get the current state of the workflow for a workorder.
+Based on the state, the `workflow-step` directive renders the template defined in the workflow step.
+At this point, control is passed to the module that implements the individual step.
 
 
 ## Topics
 
-As part of rendering Workflows, this module publishes and subscribes to several topics. These topics can be implemented in your application or you can use the fh-wfm-workflow module that already has implementations for these topics.
+As part of rendering Workflows, this module publishes and subscribes to several topics.
+These topics can be implemented in your application or you can use the fh-wfm-workflow module that already has implementations for these topics.
 
 ### Published Topics
 
-Each of the following topics subscribes to the `error` and `done` topics. If the parameter includes a `topicUid`, the error topic should have the `topicUid` appended to the `done` or `error` topic.
+Each of the following topics subscribes to the `error` and `done` topics.
+If the parameter includes a `topicUid`, the error topic should have the `topicUid` appended to the `done` or `error` topic.
 
 | Topic | Parameters |
 | ---- | ----------- |
