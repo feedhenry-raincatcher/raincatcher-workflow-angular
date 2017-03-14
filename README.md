@@ -124,3 +124,16 @@ Each of the `done` topics for the following topics contin the following paramete
 | *wfm:workflows:step:previous*| `{workorderId: "WORKORDERID", topicUid: "WORKORDERID"}` |
 | *wfm:workflows:step:complete*| `{workorderId: "WORKORDERID", topicUid: "WORKORDERID", submission: {...}, stepCode: "CODEOFCOMPLETEDSTEP"}` |
 
+## Development
+
+Install module dependencies
+    
+      npm install
+
+Link module into your app
+
+      npm link .
+
+Start monitor changes in templates.
+
+      grunt wfmTemplate:watch
