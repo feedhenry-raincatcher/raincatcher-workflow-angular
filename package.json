@@ -8,8 +8,8 @@
     "url": "https://github.com/feedhenry-raincatcher/raincatcher-workflow-angular.git"
   },
   "scripts": {
-    "build": "wfm-template-build -m 'wfm.workflow.directives' -t lib/template",
-    "watch": "wfm-template-build -w -m 'wfm.workflow.directives' -t lib/template",
+    "build": "grunt wfmTemplate:build",
+    "watch": "grunt wfmTemplate:watch",
     "test": "grunt"
   },
   "keywords": [
@@ -27,7 +27,7 @@
     "string-template": "^1.0.0"
   },
   "devDependencies": {
-    "fh-wfm-template-build": "0.0.9",
+    "fh-wfm-template-build": "0.2.1",
     "grunt": "^1.0.1",
     "grunt-eslint": "^18.0.0",
     "grunt-mocha-test": "0.13.2",
