@@ -8,7 +8,7 @@ try {
 ngModule.run(['$templateCache', function ($templateCache) {
   $templateCache.put('wfm-template/workflow-process-begin.tpl.html',
     '<div class="workflow" ng-if="ctrl.workflow">\n' +
-    '  <workflow-progress workflow="ctrl.workflow" step-index="ctrl.stepIndex"></workflow-progress>\n' +
+    '  <workflow-progress workflow="ctrl.workflow" step-index="-1"></workflow-progress>\n' +
     '\n' +
     '  <workorder workorder="ctrl.workorder" status="ctrl.status"></workorder>\n' +
     '  <div class="workflow-actions md-padding md-whiteframe-z4">\n' +
