@@ -1,5 +1,5 @@
 <div class="workflow" ng-if="ctrl.workflow">
-  <workflow-progress workflow="ctrl.workflow" step-index="Object.keys(ctrl.workflow.steps).length + 3"></workflow-progress>
+  <workflow-progress workflow="ctrl.workflow" step-index="ctrl.stepIndex"></workflow-progress>
 
   <workorder workorder="ctrl.workorder" status="ctrl.result.status"></workorder>
   <workflow-result result="ctrl.result" workflow="ctrl.workflow"></workflow-result>
