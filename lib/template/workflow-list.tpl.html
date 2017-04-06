@@ -15,7 +15,11 @@
   <md-list-item ng-repeat="workflow in ctrl.workflows" ng-click="ctrl.selectWorkflow($event, workflow)" ng-class="{active: selected.id === workflow.id}" >
     <div class="md-list-item-text">
       <p>
-        {{workflow.title}}
+        {{workflow.title}} <br/>
+        <md-icon ng-if="workflow._syncStatus" md-font-set="material-icons" class="material-icons sync-error-icon">
+          sync_problem
+        </md-icon>
+        <i ng-if="workflow._syncStatus" class="sync-error-message"> Sync failed: {{workflow._syncStatus.message}} </i>
       </p>
     </div>
     <md-divider></md-divider>
