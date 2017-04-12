@@ -24,7 +24,11 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '  <md-list-item ng-repeat="workflow in ctrl.workflows" ng-click="ctrl.selectWorkflow($event, workflow)" ng-class="{active: selected.id === workflow.id}" >\n' +
     '    <div class="md-list-item-text">\n' +
     '      <p>\n' +
-    '        {{workflow.title}}\n' +
+    '        {{workflow.title}} <br/>\n' +
+    '        <md-icon ng-if="workflow._syncStatus" md-font-set="material-icons" class="material-icons sync-error-icon">\n' +
+    '          sync_problem\n' +
+    '        </md-icon>\n' +
+    '        <i ng-if="workflow._syncStatus" class="sync-error-message"> Sync failed: {{workflow._syncStatus.message}} </i>\n' +
     '      </p>\n' +
     '    </div>\n' +
     '    <md-divider></md-divider>\n' +
