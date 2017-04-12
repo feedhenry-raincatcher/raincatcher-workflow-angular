@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-workflow-angular",
-  "version": "0.1.4-alpha.507.2",
+  "version": "0.2.0",
   "description": "An Angular 1 Implementation of the fh-wfm-workflow module",
   "main": "lib/workflow-ng.js",
   "repository": {
@@ -19,7 +19,7 @@
   "author": "Brian Leathem",
   "license": "MIT",
   "dependencies": {
-    "fh-wfm-mediator": "0.3.2",
+    "fh-wfm-mediator": "0.3.3",
     "lodash": "4.7.0",
     "ng-feedhenry": "0.3.0",
     "q": "1.4.1",
