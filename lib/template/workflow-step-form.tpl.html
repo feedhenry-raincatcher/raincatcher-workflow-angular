@@ -26,12 +26,6 @@
     </div>
   </md-input-container>
   <md-input-container class="md-block">
-    <label>FormID</label>
-    <md-select ng-model="wfsfController.model.step.formId" name="formId" id="formId">
-       <md-option ng-repeat="form in wfsfController.forms" value="{{form._id}}">{{form._id}} ({{form.name}})</md-option>
-     </md-select>
-  </md-input-container>
-  <md-input-container class="md-block">
     <label>form template</label>
     <input type="text" id="form" name="form" ng-model="wfsfController.model.step.templates.form">
   </md-input-container>

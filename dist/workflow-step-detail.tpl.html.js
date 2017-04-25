@@ -17,15 +17,6 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '    </div>\n' +
     '  </md-list-item>\n' +
     '  <md-divider></md-divider>\n' +
-    '  <md-divider></md-divider>\n' +
-    '  <md-list-item class="md-2-line" ng-show="step.formId">\n' +
-    '    <md-icon md-font-set="material-icons">label</md-icon>\n' +
-    '    <div class="md-list-item-text">\n' +
-    '      <h3>{{step.formId}}</h3>\n' +
-    '      <p>FormId</p>\n' +
-    '    </div>\n' +
-    '  </md-list-item>\n' +
-    '  <md-divider></md-divider>\n' +
     '  <md-list-item class="md-2-line" ng-show="step.templates && step.templates.view">\n' +
     '    <md-icon md-font-set="material-icons">label</md-icon>\n' +
     '    <div class="md-list-item-text">\n' +
