@@ -90,7 +90,6 @@ If the parameter includes a `topicUid`, the error topic should have the `topicUi
 | *wfm:workflows:update* | `{ workflowToUpdate: workflowToCreate, topicUid: topicUid}` |
 | *wfm:workflows:remove* | `{ id: "IDOFWORKFLOW, topicUid: "IDOFWORKFLOW"}` |
 | *wfm:workorders:list* | NONE |
-| *wfm:appform:form:list* | NONE |
 
 #### Step Topics
 

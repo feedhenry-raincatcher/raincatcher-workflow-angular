@@ -35,12 +35,6 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '    </div>\n' +
     '  </md-input-container>\n' +
     '  <md-input-container class="md-block">\n' +
-    '    <label>FormID</label>\n' +
-    '    <md-select ng-model="wfsfController.model.step.formId" name="formId" id="formId">\n' +
-    '       <md-option ng-repeat="form in wfsfController.forms" value="{{form._id}}">{{form._id}} ({{form.name}})</md-option>\n' +
-    '     </md-select>\n' +
-    '  </md-input-container>\n' +
-    '  <md-input-container class="md-block">\n' +
     '    <label>form template</label>\n' +
     '    <input type="text" id="form" name="form" ng-model="wfsfController.model.step.templates.form">\n' +
     '  </md-input-container>\n' +
