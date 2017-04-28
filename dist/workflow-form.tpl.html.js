@@ -13,7 +13,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '    <div class="md-toolbar-tools">\n' +
     '      <h3>{{ctrl.model.id ? \'Update\' : \'Create\'}} workflow</h3>\n' +
     '      <span flex></span>\n' +
-    '      <md-button class="md-icon-button" aria-label="Close" ng-click="ctrl.selectWorkflow($event, workflow)">\n' +
+    '      <md-button class="md-icon-button" aria-label="Close" ng-click="ctrl.selectWorkflow($event, ctrl.model)">\n' +
     '        <md-icon md-font-set="material-icons">close</md-icon>\n' +
     '      </md-button>\n' +
     '    </div>\n' +
