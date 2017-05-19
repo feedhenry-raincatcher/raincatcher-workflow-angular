@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-workflow-angular",
-  "version": "0.2.4",
+  "version": "0.2.5-alpha.869.1",
   "description": "An Angular 1 Implementation of the fh-wfm-workflow module",
   "main": "lib/workflow-ng.js",
   "repository": {
