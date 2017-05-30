@@ -15,7 +15,7 @@
 
 <div class="wfm-maincol-scroll" ng-if="wfdCtrl.workflow">
   <div id="stepList" ng-model="wfdCtrl.workflow.steps" as-sortable="wfdCtrl.dragControlListeners">
-    <md-card ng-repeat="step in wfdCtrl.workflow.steps" as-sortable-item>
+    <md-card ng-repeat="step in wfdCtrl.workflow.steps track by $index"  as-sortable-item>
       <md-card-content as-sortable-item-handle>
         <workflow-step-detail step="step"></workflow-step-detail>
       </md-card-content>
@@ -28,7 +28,7 @@
           <md-icon md-font-set="material-icons">create</md-icon>
         </md-button>
         <md-button class="md-icon-button" aria-label="Delete Step"
-                   ng-click="wfdCtrl.deleteStep($event, step, wfdCtrl.workflow)">
+                   ng-click="wfdCtrl.deleteStep($event, step, $index, wfdCtrl.workflow)">
           <md-icon md-font-set="material-icons">delete sweep</md-icon>
         </md-button>
 
