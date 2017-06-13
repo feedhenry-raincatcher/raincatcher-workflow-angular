@@ -95,8 +95,6 @@ If the parameter includes a `topicUid`, the error topic should have the `topicUi
 
 The following topics allow the updating of the workflow state to progress through a workflow.
 
-Each of the `done` topics for the following topics contin the following parameters
-
 
 ```
 {
